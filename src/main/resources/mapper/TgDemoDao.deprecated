@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.idriven.demo.mapper.TgDemoDao">
+
+    <resultMap type="com.idriven.demo.po.TgDemo" id="TgDemoMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="deleted" column="deleted" jdbcType="BOOLEAN"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="jsonProfile" column="json_profile" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 批量插入 -->
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into smp.tg_demo(name, create_time, deleted, update_time, json_profile)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.createTime}, #{entity.deleted}, #{entity.updateTime}, #{entity.jsonProfile})
+        </foreach>
+    </insert>
+    <!-- 批量插入或按主键更新 -->
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into smp.tg_demo(name, create_time, deleted, update_time, json_profile)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.createTime}, #{entity.deleted}, #{entity.updateTime}, #{entity.jsonProfile})
+        </foreach>
+        on duplicate key update
+        name = values(name) , create_time = values(create_time) , deleted = values(deleted) , update_time =
+        values(update_time) , json_profile = values(json_profile)
+    </insert>
+
+</mapper>
+
