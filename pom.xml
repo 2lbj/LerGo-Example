@@ -37,14 +37,28 @@
         <dependency>
             <groupId>io.github.2lbj</groupId>
             <artifactId>lergo-spring-boot-starter</artifactId>
-            <version>1.0.9</version>
+            <version>1.0.10-SNAPSHORT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.yaml</groupId>
+                    <artifactId>snakeyaml</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-collections</groupId>
+                    <artifactId>commons-collections</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-        <!-- Fix snakeyaml CVE -->
+        <!-- Fix CVE 20231115 -->
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
         </dependency>
 
         <!-- DB Driver -->
@@ -55,23 +69,6 @@
         </dependency>
 
         <!--引入本地jar包-->
-        <!--<dependency>
-            <groupId>cn.soboys</groupId>
-            <artifactId>simplest-api-spring-boot-starter</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.soboys</groupId>
-            <artifactId>simplest-jpa-spring-boot-starter</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.soboys</groupId>
-            <artifactId>rest-api-spring-boot-starter</artifactId>
-            <version>1.7.0</version>
-        </dependency>-->
 
     </dependencies>
 
