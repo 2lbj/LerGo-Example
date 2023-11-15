@@ -1,6 +1,6 @@
-package com.idriven.common.filter;
+package com.xxxxxx.common.filter;
 
-import com.idriven.common.annotation.ApiToken;
+import com.xxxxxx.common.annotation.ApiToken;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;

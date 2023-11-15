@@ -1,24 +1,18 @@
-package com.idriven.web;
+package com.xxxxxx.web;
 
 
-import cn.zhxu.bs.BeanSearcher;
-import cn.zhxu.bs.SearchResult;
-import cn.zhxu.bs.operator.Equal;
-import cn.zhxu.bs.operator.StartWith;
-import cn.zhxu.bs.util.MapUtils;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.idriven.common.annotation.ApiToken;
-import com.idriven.entity.po.TgDemo;
-import com.idriven.service.TgDemoService;
+import com.lergo.framework.annotation.LogTracker;
+import com.xxxxxx.common.annotation.ApiToken;
+import com.xxxxxx.entity.po.TgDemo;
+import com.xxxxxx.service.TgDemoService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
-import java.util.Map;
 
 
 @RestController
@@ -32,7 +26,9 @@ public class DemoPGController {
 
 
     @GetMapping("all")
+    @LogTracker
     public List<TgDemo> all() {
+        System.out.println(tgDemoService.list().get(0).getCreateTime().getTime());
         return tgDemoService.list();
     }
 

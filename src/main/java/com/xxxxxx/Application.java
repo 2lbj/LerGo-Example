@@ -1,4 +1,4 @@
-package com.idriven;
+package com.xxxxxx;
 
 import com.lergo.framework.LergoBootStarter;
 import org.springframework.boot.SpringApplication;

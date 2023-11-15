@@ -1,7 +1,7 @@
-package com.idriven.mapper;
+package com.xxxxxx.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.idriven.entity.po.TgDemo;
+import com.xxxxxx.entity.po.TgDemo;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

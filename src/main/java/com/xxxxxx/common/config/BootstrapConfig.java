@@ -1,4 +1,4 @@
-package com.idriven.common.config;
+package com.xxxxxx.common.config;
 
 import org.springframework.context.annotation.Configuration;
 
