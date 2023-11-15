@@ -1,6 +1,6 @@
-package com.idriven.common.handler;
+package com.xxxxxx.common.handler;
 
-import com.idriven.entity.enums.TgDemoSexEnum;
+import com.xxxxxx.entity.enums.TgDemoSexEnum;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 

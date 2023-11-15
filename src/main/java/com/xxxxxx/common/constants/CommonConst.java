@@ -1,4 +1,4 @@
-package com.idriven.common.constants;
+package com.xxxxxx.common.constants;
 /**
  * 公用常量
  */

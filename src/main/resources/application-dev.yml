@@ -13,7 +13,7 @@ management:
 
 logging:
   level:
-    com.idriven: debug
+    com.xxxxxx: debug
 ############################################## 以上为调试配置，生产环境请删除 ##############################################
 
 application:

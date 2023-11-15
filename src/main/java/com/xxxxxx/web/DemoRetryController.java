@@ -1,15 +1,17 @@
-package com.idriven.web;
+package com.xxxxxx.web;
 
 
-import com.idriven.common.utils.FeishuNotifications;
 import com.lergo.framework.utils.RetryExtracted;
+import com.xxxxxx.common.utils.FeishuNotifications;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-import static com.idriven.common.utils.FeishuNotifications.COLOUR.ORANGE;
+import static com.xxxxxx.common.utils.FeishuNotifications.COLOUR.ORANGE;
 
 
 @RestController

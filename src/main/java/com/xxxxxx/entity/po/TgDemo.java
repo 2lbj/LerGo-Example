@@ -1,11 +1,11 @@
-package com.idriven.entity.po;
+package com.xxxxxx.entity.po;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import com.idriven.entity.enums.TgDemoSexEnum;
+import com.xxxxxx.entity.enums.TgDemoSexEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;

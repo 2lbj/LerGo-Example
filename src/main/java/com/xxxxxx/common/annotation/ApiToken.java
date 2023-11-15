@@ -1,4 +1,4 @@
-package com.idriven.common.annotation;
+package com.xxxxxx.common.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

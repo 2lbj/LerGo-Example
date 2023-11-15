@@ -1,4 +1,4 @@
-package com.idriven.common.utils;
+package com.xxxxxx.common.utils;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.http.HttpUtil;

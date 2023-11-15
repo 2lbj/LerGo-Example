@@ -1,7 +1,7 @@
-package com.idriven.service;
+package com.xxxxxx.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.idriven.entity.po.TgDemo;
+import com.xxxxxx.entity.po.TgDemo;
 
 /**
  * 自动构建基准字段 [tg_demo: table]
