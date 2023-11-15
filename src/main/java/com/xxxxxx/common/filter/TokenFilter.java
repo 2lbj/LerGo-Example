@@ -48,7 +48,6 @@ public class TokenFilter implements WebFilter {
                 .getHandler(exchange).cast(HandlerMethod.class);
 
         if(flag) {
-            log.debug("Debug --> ");
             return chain.filter(exchange);
         }
 

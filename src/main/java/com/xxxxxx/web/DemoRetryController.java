@@ -17,7 +17,7 @@ import static com.xxxxxx.common.utils.FeishuNotifications.COLOUR.ORANGE;
 @RestController
 @RequestMapping("demo")
 @Slf4j
-@Tag(name = "样例", description = "代码实现模板")
+@Tag(name = "重试样例", description = "Retry代码实现模板")
 public class DemoRetryController {
 
     @Resource

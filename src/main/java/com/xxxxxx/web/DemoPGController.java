@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("demo/db")
 @Slf4j
-@Tag(name = "样例", description = "代码实现模板")
+@Tag(name = "数据样例", description = "DB代码实现模板")
 public class DemoPGController {
 
     @Resource
