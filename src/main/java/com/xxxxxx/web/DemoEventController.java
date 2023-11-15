@@ -26,10 +26,4 @@ public class DemoEventController {
         bean.sendMsg("AKB48");
     }
 
-    @GetMapping("/publish-async")
-    @LogTracker("发布者发送消息-异步")
-    public void publishAsync() {
-        bean.sendMsg("其实啥也没干, 就是发了个消息");
-        bean.sendMsg("AKB48");
-    }
 }

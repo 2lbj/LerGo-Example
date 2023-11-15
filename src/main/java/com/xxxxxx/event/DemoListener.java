@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DemoListener {
+
     @EventListener(value = {DemoEvent.class})
     public void processApplicationEvent(DemoEvent event) {
         String msg = event.getMsg();
