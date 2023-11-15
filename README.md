@@ -10,20 +10,22 @@
 
 ### 数据库设计约定
 
-* 主键 **id** <kbd>int8(64)</kbd> 内容:`雪花ID`
-* 创建时间 **create_time** <kbd>timestamp(6)</kbd> 内容:`时间戳`
-* 更新时间 **update_time** <kbd>timestamp(6)</kbd> 内容:`时间戳`
-* 逻辑删除 **deleted** <kbd>bool</kbd> 内容:`T-F/1-0`
-* JSON数据 **xxx_json** <kbd>jsonb</kbd> 内容:`json`
-
-> 旧版本PG 可考虑用 json 类型代替
-
-### 代码约定
+| 逻辑     |      建议命名       | JAVA-PO类型`内容`                  | 数据库类型`内容`                     |
+|--------|:---------------:|--------------------------------|-------------------------------|
+| 主键     |     **id**      | <kbd>Long</kbd>`1700012345`    | <kbd>int8(64)</kbd>`雪花ID`     |
+| 创建时间   | **create_time** | <kbd>Timestamp</kbd>`date`     | <kbd>timestamp(6)</kbd>`时间戳`  |
+| 更新时间   | **update_time** | <kbd>Timestamp</kbd>`date`     | <kbd>timestamp(6)</kbd>`时间戳`  |
+| 逻辑删除   |   **deleted**   | <kbd>Boolean</kbd>`true/false` | <kbd>bool</kbd>`T-F/1-0`      |
+| 枚举类型   |  **xxx_enum**   | <kbd>enum</kbd>`X,Y`           | <kbd>int2(16)</kbd>`0,1,2...` |
+| JSON数据 |  **xxx_json**   | <kbd>Object</kbd>`{...}`       | <kbd>jsonb</kbd>`json`        |
 
 * 数据库映射实体类不得使用基础类型
 
-> 例如不得使用: int/long/boolean *阿里巴巴开发手册*
+        例如不得使用: int/long/boolean 参考:阿里巴巴开发手册
+* 数据主键使用 <kbd>bigint</kbd> <kbd>int8(64)</kbd> 类型
+* 数据库映射如包含时间类型优先使用 **java.sql.Timestamp**
 
-* 数据库映射如包含时间类型请尽量使用 **java.sql.Timestamp**
+        MySQL/MariaDB 可考虑 bigint 类型替换
+* 旧版本PG <kbd>jsonb</kbd> 可考虑用 <kbd>json</kbd> 类型代替
 
-> MySQL/MariaDB 可考虑Long类型替换
+### 代码约定
