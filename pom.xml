@@ -14,7 +14,7 @@
 	<artifactId>lergo-example</artifactId>
     <version>1.0</version>
     <name>Demo</name>
-    <description>Lergo Demo</description>
+    <description>LerGo example project</description>
 
     <properties>
         <application.artifactId>${artifactId}</application.artifactId>
