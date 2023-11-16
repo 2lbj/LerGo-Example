@@ -21,12 +21,8 @@ application:
   version: @application.version@
 
 lergo:
-  boot:
-    with-jdbc: true
-    #with-redis: true
-  open-api:
-    title: @application.name@
-    version: @application.version@
+  boot-with-jdbc: true
+  #boot-with-redis: true
 
 spring:
   application:
