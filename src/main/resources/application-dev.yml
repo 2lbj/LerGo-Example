@@ -16,17 +16,16 @@ logging:
     com.xxxxxx: debug
 ############################################## 以上为调试配置，生产环境请删除 ##############################################
 
-application:
-  artifactId: @application.artifactId@
-  version: @application.version@
-
 lergo:
-  boot-with-jdbc: true
-  #boot-with-redis: true
+  boot.with-jdbc: true
+  #boot.with-redis: true
 
 spring:
   application:
     name: @application.name@
+    artifactId: @project.artifactId@
+    version: @project.version@
+    description: @project.description@
   datasource:
     url: jdbc:postgresql://localhost/postgres?tringtype=unspecified
     username: postgres
