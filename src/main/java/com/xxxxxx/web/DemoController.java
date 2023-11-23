@@ -16,7 +16,6 @@ public class DemoController {
 
     @GetMapping(value = "test")
     @UnAuthentication
-    @RawResponse
     public String test() {
         return "OK I'm a json";
     }
