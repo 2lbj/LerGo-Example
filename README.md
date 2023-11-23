@@ -1,4 +1,6 @@
-[![Author](https://img.shields.io/badge/Author-hexLi-666699)](https://2lbj.github.io/) [![last-commit](https://img.shields.io/github/last-commit/2lbj/lergo-spring-boot-starter)](https://github.com/2lbj/lergo-spring-boot-starter) [![license](https://img.shields.io/badge/license-Apache%202.0-orange)](./LICENSE)
+[![Author](https://img.shields.io/badge/Author-hexLi-666699)](https://2lbj.github.io/)
+[![last-commit](https://img.shields.io/github/last-commit/2lbj/lergo-spring-boot-starter)](https://github.com/2lbj/lergo-spring-boot-starter)
+[![license](https://img.shields.io/badge/license-Apache%202.0-orange)](./LICENSE)
 
 # LerGo-Example (模板工程)
 
