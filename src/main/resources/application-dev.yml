@@ -17,7 +17,6 @@ logging:
     com.lergo.framework.filter.LogFilter: TRACE
     com.lergo.framework.filter.ResultFilter: DEBUG
 ############################################## 以上为调试配置，生产环境请删除 ##############################################
-
 lergo:
   boot:
     with-jdbc: true

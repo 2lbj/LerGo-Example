@@ -1,6 +1,7 @@
 package com.xxxxxx.web;
 
 import com.lergo.framework.annotation.LogTracker;
+import com.lergo.framework.annotation.UnAuthentication;
 import com.xxxxxx.event.DemoPublisher;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
@@ -20,9 +21,9 @@ public class DemoEventController {
     DemoPublisher bean;
 
     @GetMapping("/publish")
+    @UnAuthentication
     @LogTracker("发布者发送消息")
     public void publish() {
-        bean.sendMsg("其实啥也没干, 就是发了个消息");
         bean.sendMsg("AKB48");
     }
 
