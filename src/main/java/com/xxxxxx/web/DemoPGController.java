@@ -4,7 +4,6 @@ package com.xxxxxx.web;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lergo.framework.annotation.LogTracker;
-import com.xxxxxx.common.annotation.ApiToken;
 import com.xxxxxx.entity.po.TgDemo;
 import com.xxxxxx.service.TgDemoService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -28,13 +27,6 @@ public class DemoPGController {
     @GetMapping("all")
     @LogTracker
     public List<TgDemo> all() {
-        System.out.println(tgDemoService.list().get(0).getCreateTime().getTime());
-        return tgDemoService.list();
-    }
-
-    @GetMapping("all-token")
-    @ApiToken
-    public List<TgDemo> allToken() {
         return tgDemoService.list();
     }
 

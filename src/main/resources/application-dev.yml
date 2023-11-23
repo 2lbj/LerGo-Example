@@ -14,11 +14,19 @@ management:
 logging:
   level:
     com.xxxxxx: debug
+    com.lergo.framework.filter.LogFilter: TRACE
+    com.lergo.framework.filter.ResultFilter: TRACE
 ############################################## 以上为调试配置，生产环境请删除 ##############################################
 
 lergo:
-  boot.with-jdbc: true
-  #boot.with-redis: true
+  boot:
+    with-jdbc: true
+    with-redis: true
+  filter:
+    auth: true
+    auth-header-name: token
+    timer: true
+    result: true
 
 spring:
   application:
@@ -36,7 +44,3 @@ spring:
 #  webflux.base-path: /api
 mybatis-plus:
   configuration.default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
-
-token:
-  filter-flag: true
-  header-name: token
