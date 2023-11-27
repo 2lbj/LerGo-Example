@@ -22,7 +22,7 @@ lergo:
     with-jdbc: true
     with-redis: true
   filter:
-    auth: true
+    auth: false
     auth-header-name: token
     timer: true
     result: true

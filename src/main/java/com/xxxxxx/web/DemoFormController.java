@@ -12,9 +12,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 @RestController
-@RequestMapping("demo")
+@RequestMapping("demo/io")
 @Slf4j
-@Tag(name = "样例", description = "I/O表单")
+@Tag(name = "文件样例", description = "I/O表单")
 public class DemoFormController {
 
     @PostMapping(value = "form", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)

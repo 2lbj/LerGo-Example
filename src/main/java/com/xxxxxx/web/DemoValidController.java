@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("demo")
+@RequestMapping("demo/valid")
 @Slf4j
 @Tag(name = "校验样例", description = "Valid代码实现模板")
 @Validated
@@ -25,7 +25,8 @@ public class DemoValidController {
     @GetMapping("param")
     @Operation(summary = "param")
     @LogTracker("请求-参数")
-    public int param(@RequestParam @Max(10) int tx, @RequestParam @Min(10) int ty) {
+    public int param(@RequestParam @Max(10) int tx,
+                     @RequestParam @Min(10) int ty) {
         return tx + ty;
     }
 
