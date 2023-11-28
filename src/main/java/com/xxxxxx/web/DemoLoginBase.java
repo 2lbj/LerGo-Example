@@ -20,9 +20,7 @@ public class DemoLoginBase {
     @Data
     @AllArgsConstructor
     static class User {
-
         private Integer id;
         private String name;
-
     }
 }
