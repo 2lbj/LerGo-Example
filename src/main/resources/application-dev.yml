@@ -4,6 +4,9 @@ server:
 springdoc:
   api-docs:
     enabled: true
+#    resolve-schema-properties: true
+#  writer-with-default-pretty-printer: true
+#  override-with-generic-response: true
 
 management:
   endpoints:
@@ -13,6 +16,7 @@ management:
 
 logging:
   level:
+    #org.springframework.boot.web.embedded.netty.NettyWebServer: WARN
     com.xxxxxx: DEBUG
     com.lergo.framework.filter.LogFilter: TRACE
     com.lergo.framework.filter.ResultFilter: DEBUG
@@ -23,7 +27,7 @@ lergo:
     with-redis: true
   filter:
     #authJWT: true
-    #authRedis: true
+    authRedis: true
     auth-expire-seconds: 3600
     auth-header-name: token
     timer: true
