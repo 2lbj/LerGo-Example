@@ -5,6 +5,7 @@ import com.lergo.framework.annotation.UnAuthentication;
 import com.xxxxxx.common.exception.XxxBizException;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,7 +29,7 @@ public class DemoController {
         return "OK I'm a raw string";
     }
 
-    @GetMapping(value = "error")
+    @DeleteMapping(value = "error")
     @UnAuthentication
     public void error() {
         throw new XxxBizException("I'm a error");

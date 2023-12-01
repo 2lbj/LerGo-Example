@@ -31,7 +31,7 @@ lergo:
     auth-expire-seconds: 3600
     auth-header-name: token
     timer: true
-    result: true
+    #result: true
 
 spring:
   application:
