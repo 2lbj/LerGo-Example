@@ -2,6 +2,7 @@ package com.xxxxxx.web;
 
 import com.lergo.framework.annotation.RawResponse;
 import com.lergo.framework.annotation.UnAuthentication;
+import com.xxxxxx.common.exception.XxxBizException;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,12 @@ public class DemoController {
     @RawResponse
     public String testRaw() {
         return "OK I'm a raw string";
+    }
+
+    @GetMapping(value = "error")
+    @UnAuthentication
+    public void error() {
+        throw new XxxBizException("I'm a error");
     }
 
 }
