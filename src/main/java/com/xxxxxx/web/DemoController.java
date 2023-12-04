@@ -2,6 +2,7 @@ package com.xxxxxx.web;
 
 import com.lergo.framework.annotation.RawResponse;
 import com.lergo.framework.annotation.UnAuthentication;
+import com.lergo.framework.entity.CommonResult;
 import com.xxxxxx.common.exception.XxxBizException;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
@@ -33,6 +34,12 @@ public class DemoController {
     @UnAuthentication
     public void error() {
         throw new XxxBizException("I'm a error");
+    }
+
+    @GetMapping(value = "testCommon")
+    @UnAuthentication
+    public CommonResult<String> testCommon() {
+        return CommonResult.success("OK I'm a common json");
     }
 
 }

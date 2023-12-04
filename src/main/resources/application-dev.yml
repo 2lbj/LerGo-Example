@@ -31,7 +31,7 @@ lergo:
     auth-expire-seconds: 3600
     auth-header-name: token
     timer: true
-    #result: true
+    result: true
 
 spring:
   application:
@@ -49,3 +49,11 @@ spring:
 #  webflux.base-path: /api
 mybatis-plus:
   configuration.default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+
+resilience4j:
+  ratelimiter:
+    instances:
+      xxxxRateLimiter:
+        limitForPeriod: 1 # 每秒允许的请求数量
+        limitRefreshPeriod: 3000ms # 刷新周期
+        timeoutDuration: 0ms # 超时时间
