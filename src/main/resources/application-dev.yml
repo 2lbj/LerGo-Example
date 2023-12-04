@@ -50,10 +50,11 @@ spring:
 mybatis-plus:
   configuration.default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
 
+# 自定义限流组件
 resilience4j:
   ratelimiter:
     instances:
       xxxxRateLimiter:
-        limitForPeriod: 1 # 每秒允许的请求数量
+        limitForPeriod: 1 # 周期允许的请求数量
         limitRefreshPeriod: 3000ms # 刷新周期
         timeoutDuration: 0ms # 超时时间
