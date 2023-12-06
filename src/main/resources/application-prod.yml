@@ -5,12 +5,9 @@
 lergo:
   boot:
     with-jdbc: true
-    with-redis: true
   filter:
-    authJWT: true
-    auth-header-name: token
-    timer: true
     result: true
+    auth-jwt: true
 
 spring:
   application:
