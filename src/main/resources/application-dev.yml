@@ -20,18 +20,25 @@ logging:
     com.xxxxxx: DEBUG
     com.lergo.framework.filter.LogFilter: TRACE
     com.lergo.framework.filter.ResultFilter: DEBUG
+    com.lergo.framework.filter.AuthRedisFilter: DEBUG
+    com.lergo.framework.filter.AuthJWTFilter: DEBUG
 ############################################## 以上为调试配置，生产环境请删除 ##############################################
 lergo:
   boot:
     with-jdbc: true
     with-redis: true
   filter:
-    #authJWT: true
-    authRedis: true
-    auth-expire-seconds: 3600
-    auth-header-name: token
     timer: true
     result: true
+    auth-jwt: true
+    #auth-redis: true
+    auth-expire-seconds: 30
+    auth-header-name: Authorization
+  jwt:
+    app-key: lerGo-app-key
+    app-secret: lerGo-app-secret
+    leeway-seconds: 30
+    refresh: true
 
 spring:
   application:
