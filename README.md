@@ -49,5 +49,5 @@
 
 # 技术文章
 
-* [框架LerGo选型的Webflux有什么技术特点](/docs/WebFlux.html)
-* [什么是JWT以及Auth2.0认证机制](/docs/JWT_Auth2.0.html)
+* [框架LerGo选型的Webflux有什么技术特点](/docs/WebFlux/index.md)
+* [什么是JWT以及Auth2.0认证机制](/docs/JWT_Auth2.0/index.md)
