@@ -22,8 +22,8 @@
    * @param header
    * @param queryMap
    * @return boBean
-   * @see <a href="https://api.xxxx.com/xxxx">旧接口文档</a>
-   * @deprecated 该接口已经被废弃，使用新接口<a href="https://api.xxxx.com/xxxx?version=1.1">新接口文档</a>
+   * @see <a href="https://api.xxx.com/xxx">旧接口文档</a>
+   * @deprecated 该接口已经被废弃，使用<a href="https://api.xxx.com/xxx?version=1.1">新接口文档</a>
    */
   ```
 * 配置文件中变量引用应考虑默认值
