@@ -30,7 +30,7 @@ lergo:
   filter:
     timer: true
     result: true
-    auth-jwt: true
+    #auth-jwt: true
     #auth-redis: true
     auth-expire-seconds: 30
     auth-header-name: Authorization
@@ -54,8 +54,6 @@ spring:
 #    pathmatch:
 #      matching-strategy: ant_path_matcher
 #  webflux.base-path: /api
-#mybatis-plus:
-#  configuration.default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
 
 # 自定义限流组件
 resilience4j:

@@ -1,5 +1,6 @@
 package com.xxxxxx.web;
 
+import com.lergo.framework.annotation.RawResponse;
 import com.lergo.framework.utils.QRCodeTool;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoQRCodeController {
 
     @GetMapping("qrcode")
+    @RawResponse
     @Operation(summary = "生成二维码", description = "根据给定字符 生成二维码")
     public ResponseEntity<String> qrcode(String data) {
 
@@ -26,6 +28,7 @@ public class DemoQRCodeController {
     }
 
     @GetMapping("barcode")
+    @RawResponse
     @Operation(summary = "生成条形码", description = "根据给定数字 生成条形码")
     public ResponseEntity<String> barcode(Long data) {
 
