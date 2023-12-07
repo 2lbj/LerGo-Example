@@ -1,6 +1,6 @@
 package com.xxxxxx.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mybatisflex.core.BaseMapper;
 import com.xxxxxx.entity.po.TgDemo;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,6 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @author erGo.Li
  */
 @Mapper
-public interface TgDemoDao extends BaseMapper<TgDemo> {
+public interface TgDemoMapper extends BaseMapper<TgDemo> {
 
 }

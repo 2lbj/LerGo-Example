@@ -54,8 +54,8 @@ spring:
 #    pathmatch:
 #      matching-strategy: ant_path_matcher
 #  webflux.base-path: /api
-mybatis-plus:
-  configuration.default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+#mybatis-plus:
+#  configuration.default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
 
 # 自定义限流组件
 resilience4j:

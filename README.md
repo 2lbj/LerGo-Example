@@ -51,3 +51,4 @@
 
 * [框架LerGo选型的Webflux有什么技术特点](/docs/WebFlux/index.md)
 * [什么是JWT以及Auth2.0认证机制](/docs/JWT_Auth2.0/index.md)
+* [MyBatis-Flex 和同类框架对比](https://mybatis-flex.com/zh/intro/comparison.html)

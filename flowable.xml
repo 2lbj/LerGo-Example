@@ -1,0 +1,50 @@
+<!-- idm依赖提供身份认证 -->
+<dependency>
+    <groupId>org.flowable</groupId>
+    <artifactId>flowable-spring-boot-starter-ui-idm</artifactId>
+    <version>6.8.0</version>
+</dependency>
+
+        <!-- modeler绘制流程图 -->
+<dependency>
+<groupId>org.flowable</groupId>
+<artifactId>flowable-spring-boot-starter-ui-modeler</artifactId>
+<version>6.8.0</version>
+</dependency>
+
+        <!-- flowable -->
+<dependency>
+<groupId>org.flowable</groupId>
+<artifactId>flowable-spring-boot-starter</artifactId>
+<version>6.8.0</version>
+</dependency>
+<dependency>
+<groupId>org.flowable</groupId>
+<artifactId>flowable-spring-boot-starter-rest-api</artifactId>
+<version>6.8.0</version>
+</dependency>
+<dependency>
+<groupId>org.flowable</groupId>
+<artifactId>flowable-spring-boot-starter-rest</artifactId>
+<version>6.8.0</version>
+</dependency>
+<dependency>
+<groupId>org.flowable</groupId>
+<artifactId>flowable-spring-boot-starter-ui-admin</artifactId>
+<version>6.8.0</version>
+</dependency>
+<dependency>
+<groupId>org.flowable</groupId>
+<artifactId>flowable-spring-boot-starter-ui-task</artifactId>
+<version>6.8.0</version>
+</dependency>
+
+        # Flowable
+        flowable:
+        idm:
+        app:
+        admin:
+        user-id: admin
+        password: admin
+        first-name: erGo
+        last-name: Li
