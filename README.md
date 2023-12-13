@@ -4,7 +4,8 @@
 
 # LerGo-Example (模板工程)
 
-[李二狗](https://github.com/2lbj/lergo-spring-boot-starter) 框架最佳实践
+> 众所周知 [Lergo](https://github.com/2lbj/lergo-spring-boot-starter) 作为一款优秀的开发脚手架有着非常优秀的开发体验,
+> 但是对于初次接触的开发者来说, 有时候会有一些不知所措的地方, 本项目旨在帮助开发者快速上手 Lergo 框架, 以及提供一些最佳实践
 
 ### 快速开始
 
