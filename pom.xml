@@ -68,11 +68,11 @@
             <version>8.3.0</version>
         </dependency>
 
-        <!--  -->
+        <!-- Bean-searcher -->
         <dependency>
-            <groupId>com.mybatis-flex</groupId>
-            <artifactId>mybatis-flex-spring-boot-starter</artifactId>
-            <version>1.7.5</version>
+            <groupId>cn.zhxu</groupId>
+            <artifactId>bean-searcher</artifactId>
+            <version>4.2.4</version>
         </dependency>
 
 
