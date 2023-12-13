@@ -133,7 +133,11 @@ public class DemoController {
 
 再次启动项目, 访问 `http://localhost:9999/` 就可以看到我们的接口返回了一段文本
 
-**上述提到的工程可以在 [LerGo-Mini](docs/LerGo-Mini) 中找到**
+### 高级配置
+
+希望了解更多 `LerGo` 的使用方法, 请继克隆本项目并查看源码
+
+上述提到的工程可以在 [LerGo-Mini](docs/LerGo-Mini) 中找到
 
 ### [开发规范](RULES.md)
 
