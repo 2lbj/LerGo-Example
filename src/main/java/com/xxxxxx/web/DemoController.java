@@ -30,7 +30,6 @@ public class DemoController {
         return "OK I'm a raw string";
     }
 
-    //TODO http重定向 跳转
 
     @DeleteMapping(value = "error")
     @UnAuthentication
