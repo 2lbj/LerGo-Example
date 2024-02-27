@@ -17,7 +17,7 @@
 
     function establishConnection() {
 
-        const eventSource = new EventSource("/demo/testEvents");
+        const eventSource = new EventSource("/demo/call/events");
 
         eventSource.addEventListener("sse-event", function (event) {
             //const data = JSON.parse(event.data);

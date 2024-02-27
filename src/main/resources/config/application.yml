@@ -70,3 +70,6 @@ resilience4j:
         limitForPeriod: 1 # 周期允许的请求数量
         limitRefreshPeriod: 3000ms # 刷新周期
         timeoutDuration: 0ms # 超时时间
+
+feign:
+  demo-url: http://localhost:8080
