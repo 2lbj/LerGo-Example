@@ -62,11 +62,11 @@
         <!--引入本地jar包-->
 
         <!-- 生成ULID -->
-        <!--<dependency>
+        <dependency>
             <groupId>de.huxhorn.sulky</groupId>
             <artifactId>de.huxhorn.sulky.ulid</artifactId>
             <version>8.3.0</version>
-        </dependency>-->
+        </dependency>
 
         <!-- Bean-searcher -->
         <!--<dependency>
