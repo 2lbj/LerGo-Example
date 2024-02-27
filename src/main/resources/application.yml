@@ -1,3 +1,6 @@
+#该文件可删除
+# - 建立同名文件配置其他内容会导致LerGo默认配置失效
+# - 如需覆盖框架配置请移步 classpath:/config/application.yml)
 spring:
   config:
     import:
