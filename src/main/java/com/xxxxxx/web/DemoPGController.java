@@ -5,12 +5,12 @@ import com.lergo.framework.annotation.LogTracker;
 import com.xxxxxx.entity.po.TgDemo;
 import com.xxxxxx.mapper.TgDemoMapper;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 
@@ -27,7 +27,7 @@ public class DemoPGController {
     @GetMapping("all")
     @LogTracker
     public List<TgDemo> all() {
-        return tgDemoMapper.selectAll();
+        return tgDemoMapper.selectList(null);
     }
 
 //    @GetMapping("list-mbp")

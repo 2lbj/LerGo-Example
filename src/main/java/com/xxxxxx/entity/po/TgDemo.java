@@ -1,10 +1,9 @@
 package com.xxxxxx.entity.po;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import com.mybatisflex.annotation.Id;
-import com.mybatisflex.annotation.KeyType;
-import com.mybatisflex.annotation.Table;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,11 +23,13 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = false)
 @Schema(title = "自动构建基准字段", description = "基础表模板")
-@Table("tg_demo")
+//@Table("tg_demo")
+@TableName("tg_demo")
 public class TgDemo {
 
     @JsonSerialize(using = ToStringSerializer.class)
-    @Id(keyType = KeyType.Auto)
+    //@Id(keyType = KeyType.Auto)
+    @TableId
     @Schema(title = "ID")
     private Long id;
 

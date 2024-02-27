@@ -1,6 +1,6 @@
 package com.xxxxxx.mapper;
 
-import com.mybatisflex.core.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.xxxxxx.entity.po.TgDemo;
 import org.apache.ibatis.annotations.Mapper;
 
