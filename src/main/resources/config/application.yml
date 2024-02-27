@@ -2,17 +2,8 @@ server:
   port: 8080
 
 springdoc:
-  writer-with-order-by-keys: true
   swagger-ui:
-    display-request-duration: true
-    disable-swagger-default-url: true
-    use-root-path: true
     enabled: true
-  api-docs:
-    enabled: true
-    resolve-schema-properties: true
-  writer-with-default-pretty-printer: true
-  override-with-generic-response: true
 
 management:
   endpoints:

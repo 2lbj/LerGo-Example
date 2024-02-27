@@ -4,6 +4,8 @@ import com.lergo.framework.annotation.RawResponse;
 import com.lergo.framework.annotation.UnAuthentication;
 import com.lergo.framework.entity.CommonResult;
 import com.xxxxxx.common.exception.BizEnumException;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,6 +34,9 @@ public class DemoController {
         return "OK I'm a raw string";
     }
 
+    @Operation(summary = "异常返回", description = "抛出异常枚举", responses = {
+            @ApiResponse(responseCode = "500001", description = "未知错误")
+    })
     @DeleteMapping(value = "error")
     @UnAuthentication
     public void error() {
