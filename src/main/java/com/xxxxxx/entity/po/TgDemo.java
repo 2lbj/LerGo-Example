@@ -57,6 +57,7 @@ public class TgDemo {
     private Boolean deleted;
 
     @JsonRawValue
+    @Schema(title = "JSON对象", description = "JSON对象", example = "{\"key\":\"value\"}")
     private Object jsonProfile;
 
 }

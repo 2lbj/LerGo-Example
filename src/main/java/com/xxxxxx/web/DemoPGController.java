@@ -4,6 +4,8 @@ package com.xxxxxx.web;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lergo.framework.annotation.LogTracker;
+import com.xxxxxx.common.constants.BizErrorEnum;
+import com.xxxxxx.common.exception.BizEnumException;
 import com.xxxxxx.entity.po.TgDemo;
 import com.xxxxxx.mapper.TgDemoMapper;
 import com.xxxxxx.service.TgDemoService;
@@ -11,9 +13,12 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static com.xxxxxx.common.constants.BizErrorEnum.UNKNOWN_ERROR;
 
 
 @RestController
@@ -40,13 +45,19 @@ public class DemoPGController {
     }
 
     @PostMapping("save")
-    public Boolean save(@RequestBody TgDemo demo) {
-        return tgDemoService.save(demo);
+    public TgDemo save(@RequestBody TgDemo demo) {
+        if(tgDemoService.save(demo)) {
+            return demo;
+        }
+        throw new BizEnumException(UNKNOWN_ERROR);
     }
 
     @PatchMapping("update")
-    public Boolean update(@RequestBody TgDemo demo) {
-        return tgDemoService.updateById(demo);
+    public TgDemo update(@RequestBody TgDemo demo) {
+        if(tgDemoService.updateById(demo)) {
+            return demo;
+        }
+        throw new BizEnumException(UNKNOWN_ERROR);
     }
 
     @DeleteMapping("delete")

@@ -18,14 +18,14 @@ public class CUDObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         log.debug("CUD insert fill [create_time|update_time|deleted]");
-        this.strictInsertFill(metaObject, "create_time", Timestamp.class, new Timestamp(DateUtil.current()));
-        this.strictInsertFill(metaObject, "update_time", Timestamp.class, new Timestamp(DateUtil.current()));
+        this.strictInsertFill(metaObject, "createTime", Timestamp.class, new Timestamp(DateUtil.current()));
+        this.strictInsertFill(metaObject, "updateTime", Timestamp.class, new Timestamp(DateUtil.current()));
         this.strictInsertFill(metaObject, "deleted", Boolean.class, false);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("CUD update fill [update_time]");
-        this.strictUpdateFill(metaObject, "update_time", Timestamp.class, new Timestamp(DateUtil.current()));
+        this.strictUpdateFill(metaObject, "updateTime", Timestamp.class, new Timestamp(DateUtil.current()));
     }
 }
