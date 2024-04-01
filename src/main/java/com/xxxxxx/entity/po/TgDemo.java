@@ -47,14 +47,14 @@ public class TgDemo {
     @Schema(title = "创建时间")
     private Timestamp createTime;
 
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    @Schema(title = "更新时间")
+    private Timestamp updateTime;
+
     @TableField(fill = FieldFill.INSERT)
     @TableLogic(value = "FALSE", delval = "TRUE")
     @Schema(title = "是否已删除")
     private Boolean deleted;
-
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    @Schema(title = "更新时间")
-    private Timestamp updateTime;
 
     @JsonRawValue
     private Object jsonProfile;
