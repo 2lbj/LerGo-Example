@@ -1,5 +1,6 @@
 package com.xxxxxx.web;
 
+import com.lergo.framework.exception.BizException;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +21,7 @@ public class DemoRateLimiterController {
     }
 
     private String testFallback(Throwable throwable) {
-        return "Limited please slow down";
+        throw new BizException(429, "Limited please slow down");
     }
 
     //TODO 超时 熔断 https://www.infoq.cn/article/l3b9wcuxqjh1drfjei87

@@ -26,7 +26,7 @@ public class DemoRetryController {
     public String retry() {
         feishuNotifications.sendMsg("test_default", "hello world");
         feishuNotifications.sendMsg("test_warring", "Error!", ORANGE,
-                new String[]{"yunchao_zhang@human-horizons.com"}, true);
+                new String[]{"your_name@feishu.com"}, true);
         // 定义重试器 TODO 抽象配置参数
         log.info("-------- <<< {}", RetryExtracted.booleanCallable(() ->
                 feishuNotifications.sendMsg("test_retry", "retry")));
