@@ -48,4 +48,5 @@ COMMIT;
 -- ----------------------------
 -- Primary Key structure for table tg_demo
 -- ----------------------------
-ALTER TABLE "public"."tg_demo" ADD CONSTRAINT "demo_copy1_pkey" PRIMARY KEY ("id");
+ALTER TABLE "public"."tg_demo"
+    ADD CONSTRAINT "demo_pkey" PRIMARY KEY ("id");

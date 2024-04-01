@@ -1,17 +1,21 @@
 package com.xxxxxx.web;
 
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lergo.framework.annotation.LogTracker;
+import com.xxxxxx.common.exception.BizEnumException;
 import com.xxxxxx.entity.po.TgDemo;
-import com.xxxxxx.mapper.TgDemoMapper;
+import com.xxxxxx.service.TgDemoService;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static com.xxxxxx.common.constants.BizErrorEnum.UNKNOWN_ERROR;
 
 
 @RestController
@@ -21,34 +25,41 @@ import java.util.List;
 public class DemoPGController {
 
     @Resource
-    TgDemoMapper tgDemoMapper;
+    TgDemoService tgDemoService;
 
-
-    @GetMapping("all")
+    @GetMapping("list")
     @LogTracker
-    public List<TgDemo> all() {
-        return tgDemoMapper.selectList(null);
+    public List<TgDemo> list() {
+        return tgDemoService.list();
     }
 
-//    @GetMapping("list-mbp")
-//    public IPage<TgDemo> listMbp() {
-//        return tgDemoService.page(new Page(1,10));
-//    }
-//
-//    @PostMapping("save")
-//    public Boolean save(@RequestBody TgDemo demo) {
-//        return tgDemoService.save(demo);
-//    }
-//
-//    @PatchMapping("update")
-//    public Boolean update(@RequestBody TgDemo demo) {
-//        return tgDemoService.updateById(demo);
-//    }
-//
-//    @DeleteMapping("delete")
-//    public Boolean delete(@RequestParam Long id) {
-//        return tgDemoService.removeById(id);
-//    }
+    @GetMapping("page")
+    public IPage<TgDemo> page(
+            @Parameter(description = "页码",deprecated = true) @RequestParam(defaultValue = "1") Integer current,
+            @Parameter(description = "页长",deprecated = true)  @RequestParam(defaultValue = "10") Integer size) {
+        return tgDemoService.page(new Page<>(1,10));
+    }
+
+    @PostMapping("save")
+    public TgDemo save(@RequestBody TgDemo demo) {
+        if(tgDemoService.save(demo)) {
+            return demo;
+        }
+        throw new BizEnumException(UNKNOWN_ERROR);
+    }
+
+    @PatchMapping("update")
+    public TgDemo update(@RequestBody TgDemo demo) {
+        if(tgDemoService.updateById(demo)) {
+            return demo;
+        }
+        throw new BizEnumException(UNKNOWN_ERROR);
+    }
+
+    @DeleteMapping("delete")
+    public Boolean delete(@RequestParam Long id) {
+        return tgDemoService.removeById(id);
+    }
 
 
 //    @Resource
