@@ -4,16 +4,13 @@ package com.xxxxxx.web;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lergo.framework.annotation.LogTracker;
-import com.xxxxxx.common.constants.BizErrorEnum;
 import com.xxxxxx.common.exception.BizEnumException;
 import com.xxxxxx.entity.po.TgDemo;
-import com.xxxxxx.mapper.TgDemoMapper;
 import com.xxxxxx.service.TgDemoService;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,7 +26,6 @@ public class DemoPGController {
 
     @Resource
     TgDemoService tgDemoService;
-
 
     @GetMapping("list")
     @LogTracker
