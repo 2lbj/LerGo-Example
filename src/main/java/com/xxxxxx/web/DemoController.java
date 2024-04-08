@@ -8,10 +8,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static com.xxxxxx.common.constants.BizErrorEnum.UNKNOWN_ERROR;
 
@@ -27,11 +24,14 @@ public class DemoController {
         return "OK I'm a json";
     }
 
-    @GetMapping(value = "testRaw")
+    @PostMapping(value = "testRaw",
+            consumes = "text/plain",//请求
+            produces = "text/plain"//返回
+    )
     @UnAuthentication
     @RawResponse
-    public String testRaw() {
-        return "OK I'm a raw string";
+    public String testRaw(String test) {
+        return "OK I'm a raw " + test;
     }
 
     @Operation(summary = "异常返回", description = "抛出异常枚举", responses = {
