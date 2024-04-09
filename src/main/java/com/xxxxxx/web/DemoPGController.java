@@ -35,9 +35,11 @@ public class DemoPGController {
 
     @GetMapping("page")
     public IPage<TgDemo> page(
-            @Parameter(description = "页码",deprecated = true) @RequestParam(defaultValue = "1") Integer current,
-            @Parameter(description = "页长",deprecated = true)  @RequestParam(defaultValue = "10") Integer size) {
-        return tgDemoService.page(new Page<>(1,10));
+            @Parameter(description = "页码", deprecated = true)
+            @RequestParam(defaultValue = "1") Integer current,
+            @Parameter(description = "页长", deprecated = true)
+            @RequestParam(defaultValue = "10") Integer size) {
+        return tgDemoService.page(new Page<>(current, size));
     }
 
     @PostMapping("save")
