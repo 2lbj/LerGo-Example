@@ -135,7 +135,7 @@ public class DemoController {
 
 ### 高级配置
 
-希望了解更多 `LerGo` 的使用方法, 请继克隆本项目并查看源码
+希望了解更多 `LerGo` 的使用方法, 请克隆本项目并查看源码
 
 上述提到的工程可以在 [LerGo-Mini](docs/LerGo-Mini) 中找到
 
