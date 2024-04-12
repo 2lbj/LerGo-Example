@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.17</version>
+        <version>3.2.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -36,7 +36,7 @@
         <application.artifactId>${artifactId}</application.artifactId>
         <application.version>${version}</application.version>
         <application.name>${name}</application.name>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
@@ -46,8 +46,8 @@
         <!-- 引入核心脚手架 -->
         <dependency>
             <groupId>io.github.2lbj</groupId>
-            <artifactId>lergo-spring-boot-starter</artifactId>
-            <version>1.0.11</version>
+            <artifactId>lergo-spring-boot3-starter</artifactId>
+            <version>1.1.8</version>
         </dependency>
 
         <!--引入本地jar包-->
