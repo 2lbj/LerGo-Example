@@ -5,7 +5,6 @@ import com.lergo.framework.exception.BizException;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.swagger.v3.oas.annotations.Hidden;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,7 +25,7 @@ public class ProxyAPI {
 
     //@Value("${domain}")
     String domain;
-    @Value("${atomic-uri.xxx}")
+    //@Value("${atomic-uri.xxx}")
     String atomicURI_XXX;
 
 
