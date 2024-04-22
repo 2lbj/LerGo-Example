@@ -24,10 +24,10 @@ import static com.lergo.framework.entity.CommonResult.gson;
 @Slf4j
 public class ProxyAPI {
 
-    @Value("${domain}")
+    //@Value("${domain}")
     String domain;
-    @Value("${atomic-uri.eos}")
-    String atomicURI_EOS;
+    @Value("${atomic-uri.xxx}")
+    String atomicURI_XXX;
 
 
     WebClient webClient = WebClient.builder()
@@ -66,7 +66,7 @@ public class ProxyAPI {
     @RateLimiter(name = "apiRateLimiter", fallbackMethod = "doProxyLimitFallback")
     @RawResponse
     public Mono<byte[]> eosProxy(ServerWebExchange exchange) {
-        return doProxy(exchange, atomicURI_EOS + exchange.getRequest().getPath().value()
+        return doProxy(exchange, atomicURI_XXX + exchange.getRequest().getPath().value()
                 .replaceAll("^/mgnt-eos-atomic/", "/"));
     }
 
