@@ -47,7 +47,7 @@
         <dependency>
             <groupId>io.github.2lbj</groupId>
             <artifactId>lergo-spring-boot3-starter</artifactId>
-            <version>1.1.9</version>
+            <version>1.2.0</version>
         </dependency>
 
         <!--引入本地jar包-->
